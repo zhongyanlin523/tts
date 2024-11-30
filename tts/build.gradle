@@ -3,6 +3,9 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
 }
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 group = 'com.zyl.tts'
 version = '1.0.2'
 afterEvaluate {
@@ -23,10 +26,11 @@ afterEvaluate {
     generateDebugBuildConfig.enabled =false
 }
 android {
-    compileSdk 33
+    compileSdk 30
 
     defaultConfig {
         minSdk 21
+        targetSdk 30
         versionCode 1
         versionName "1.0"
 
