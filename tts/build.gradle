@@ -18,8 +18,12 @@ afterEvaluate {
         }
     }
 }
+afterEvaluate {
+    generateReleaseBuildConfig.enabled = false
+    generateDebugBuildConfig.enabled =false
+}
 android {
-    compileSdk 30
+    compileSdk 33
 
     defaultConfig {
         minSdk 21
